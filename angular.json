@@ -28,7 +28,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/themes/light-theme/light-theme.scss",
+              {
+                "inject": false,
+                "input": "src/themes/dark-theme/dark-theme.scss",
+                "bundleName": "dark-theme"
+              }
             ],
             "scripts": []
           },
@@ -96,7 +102,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/themes/light-theme/light-theme.scss",
+              {
+                "inject": false,
+                "input": "src/themes/dark-theme/dark-theme.scss",
+                "bundleName": "dark-theme"
+              }
             ],
             "scripts": []
           }

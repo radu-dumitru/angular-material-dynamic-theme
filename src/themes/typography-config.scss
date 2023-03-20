@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+:root {
+  --font-family: 'Montserrat';
+}
+
+$custom-typography: mat.define-typography-config(
+  $font-family: var(--font-family),
+);

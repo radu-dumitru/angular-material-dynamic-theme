@@ -1,0 +1,31 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin custom-component-theme($theme) {
+
+  $primary: map-get($theme, primary);
+  $background: map-get($theme, background);
+  $is-dark-theme: map-get($theme, is-dark);
+
+  .custom-component {
+
+    .header {
+      background: mat.get-color-from-palette($primary);
+      color: mat.get-color-from-palette($primary, default-contrast);
+    }
+
+    .body {
+      background-color: mat.get-color-from-palette($background, card);
+    }
+
+    .action-buttons {
+      @if $is-dark-theme {
+        background: #2b2b2b;
+        color: #fff;
+      } @else {
+        background: lightgray;
+        color: #626262;
+      }
+    }
+  }
+}

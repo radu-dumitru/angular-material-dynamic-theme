@@ -1,0 +1,19 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@import './default-color-values.scss';
+@import './color-palettes.scss';
+@import '../typography-config.scss';
+@import '../custom-components-theme.scss';
+
+@include mat.core($custom-typography);
+
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $theme-primary-palette,
+    accent: $theme-accent-palette,
+    warn: $theme-warn-palette,
+  )
+));
+
+@include mat.all-component-themes($light-theme);
+@include custom-components-theme($light-theme);
